@@ -176,6 +176,7 @@ span a {
   font-size: 28px;
   display: inline-block;
   color: #fff;
+  font-weight: 600;
 }
 .split.right {
   width: 70%;
