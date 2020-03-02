@@ -25,3 +25,4 @@ Flashcard app for learning. Create an account and log in to view, add and remove
 
 1. run `npm run dev`
 2. Navigate to `localhost:5000`
+
