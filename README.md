@@ -13,8 +13,6 @@
 
 Flashcard app for learning. Create an account and log in to view, add and remove flashcards with questions and answers.
 
-## Development
-
 
 ## Install
 
