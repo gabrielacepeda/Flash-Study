@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  background: #fff;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+header {
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.pink-corner {
+  position: absolute;
+  margin-top: 25px;
+  left: 30px;
+}
+header .logo {
+  margin: 30px 40px;
+  color: #250cac;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Roboto Mono", sans-serif;
+  position: absolute;
+  text-decoration: none;
+}
+header .login {
+  text-decoration: none;
+  color: #fff;
+}
+.account-links {
+  position: absolute;
+  right: 55px;
+  margin-top: 20px;
+}
+header .sign-out {
+  position: absolute;
+  padding: 13px 25px;
+  width: 115px;
+  right: 0;
+  text-decoration: none;
+  font-size: 15px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #38dae0;
+  color: #fff;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+button:focus {
+  outline: none;
+}
+h1 {
+  position: relative;
+}
+h1 button {
+  position: absolute;
+  right: 0;
+  transform: translate(120%, -50%);
+  z-index: 2;
+}
+.btn {
+  background-color: #38dae0;
+  border: 0;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 10px 15px;
+}
+.btn-small {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+.btn-ghost {
+  border: 0;
+  background-color: transparent;
+  color: #000;
+  left: 200px;
+  font-size: 20px;
+}
+.clear {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.cards {
+  perspective: 1000px;
+  position: relative;
+  height: 300px;
+  width: 500px;
+  max-width: 100%;
+}
+
+.card {
+  position: absolute;
+  opacity: 0;
+  font-size: 1.5em;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateX(50%) rotateY(-10deg);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.card.active {
+  opacity: 1;
+  cursor: pointer;
+  z-index: 10;
+  transform: translateX(0) rotateY(0deg);
+}
+
+.card.left {
+  transform: translateX(-50%) rotateY(10deg);
+}
+
+.inner-card {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+.card.show-answer .inner-card {
+  transform: rotateX(180deg);
+}
+
+.inner-card-front,
+.inner-card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.inner-card-front {
+  transform: rotateX(0deg);
+  z-index: 2;
+}
+.inner-card-back {
+  transform: rotateX(180deg);
+}
+.inner-card-front::after,
+.inner-card-back::after {
+  content: "\f021\ ";
+  font-family: "Font Awesome 5 Free", Roboto Mono, sans-serif;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ddd;
+}
+.inner-card p {
+  letter-spacing: -1px;
+}
+.navigation {
+  display: flex;
+  margin: 20px 0;
+}
+.navigation .nav-button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+.navigation p {
+  margin: 0 20px;
+}
+
+.add-container {
+  opacity: 0;
+  background-color: #f0f0f0;
+  border-top: 2px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  transition: 0.3s ease;
+}
+.add-container.show {
+  opacity: 1;
+  z-index: 2;
+}
+.add-container h3 {
+  margin: 10px 0;
+}
+.form-group label {
+  display: block;
+  margin: 20px 0 10px;
+}
+.form-group textarea {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 12px;
+  min-width: 500px;
+  max-width: 100%;
+}

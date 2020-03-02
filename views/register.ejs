@@ -1,0 +1,70 @@
+<link rel="stylesheet" type="text/css" href="../public/style2.css" />
+<div class="main">
+  <div class="split left">
+    <img src="../public/pink-corner.png" class="pink-corner" alt="" />
+    <h1 class="logo"><a href="/">Flash Study</a></h1>
+    <div class="login-container">
+      <h3>Sign up</h3>
+      <%- include('./partials/messages') %>
+      <form action="/users/register" method="POST">
+        <input
+          type="name"
+          id="name"
+          name="name"
+          class="form-control"
+          placeholder="Enter name"
+          value="<%= typeof name != 'undefined' ? name : '' %>"
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="example@email.com"
+          value="<%=typeof email != 'undefined' ? email: ''%>"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+          placeholder="password"
+          value="<%=typeof password != 'undefined' ? password: ''%>"
+        />
+        <input
+          type="password"
+          name="password2"
+          id="password2"
+          class="form-control"
+          placeholder="confirm password"
+          value="<%=typeof password2 != 'undefined' ? password2: ''%>"
+        />
+        <input type="submit" value="Sign up" id="signup" class="signup" />
+      </form>
+      <span class="no-account"
+        >Have an account?
+        <a href="/users/login" id="login-link">Log in</a></span
+      >
+    </div>
+    <div class="about">
+      <ul>
+        <li><img src="../public/check.png" /> Create flashcards</li>
+        <li><img src="../public/event.png" />Study for exams</li>
+        <li><img src="../public/poll.png" />Improve your grades</li>
+      </ul>
+    </div>
+  </div>
+  <div class="split right">
+    <div class="heading">
+      <img class="blue-square" src="../public/blue-fullscreen.png" alt="" />
+      <img class="blue-rectangle" src="../public/blue-rectangle.png" alt="" />
+      <span class="line">Level up your grades.</span>
+      <span class="line">You’re just a few clicks away.</span>
+    </div>
+    <img class="undraw-svg" src="../public/undraw_studying.svg" alt="" />
+    <img class="pink-corner right" src="../public/pink-corner.png" alt="" />
+    <img class="white-rectangle" src="../public/white-rectangle.png" alt="" />
+    <img class="pink-squares" src="../public/pink-squares.png" alt="" />
+    <p>Create your own flashcards and save them for later.</p>
+  </div>
+</div>
