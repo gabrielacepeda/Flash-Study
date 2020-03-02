@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://dribbble.com/shots/4263961-Front-End-Interview-Scroll">
-    <img src="/public/undraw-studying.svg" alt="Front End Interview Handbook" width="400"/>
+    <img src="/public/undraw_studying.svg" alt="Front End Interview Handbook" width="400"/>
     </a>
   <br>
   <p>
