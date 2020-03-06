@@ -17,10 +17,8 @@ Flashcard app for learning. Create an account and log in to view, add and remove
 - HTML/CSS
 - JavaScript
 - Node.js
-- Express
+- npm packages: Express, Passport, Bcrypt
 - MongoDB
-- Passport
-- Bcrypt
 
 ## Install
 
