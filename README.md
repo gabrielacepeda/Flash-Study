@@ -13,6 +13,14 @@
 
 Flashcard app for learning. Create an account and log in to view, add and remove flashcards with questions and answers. Save your cards for later with local storage.
 
+## Tech Used
+- HTML/CSS
+- JavaScript
+- Node.js
+- Express
+- MongoDB
+- Passport
+- Bcrypt
 
 ## Install
 
